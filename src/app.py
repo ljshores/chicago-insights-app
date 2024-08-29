@@ -26,8 +26,9 @@ server = app.server
 df = pd.read_csv("assets/Chi_Map_Data_2.csv")
 race_df = pd.read_csv("assets/Race_Cnts_Dataset.csv")
 rental_df1 = pd.read_csv("assets/Chi_Rentals_Formatted_Data1.csv")
-rental_df2 = pd.read_csv("assets/Chi_Rentals_Formatted_Data2.csv")
-rental_df = pd.concat([rental_df1, rental_df2], axis=0)
+#rental_df2 = pd.read_csv("assets/Chi_Rentals_Formatted_Data2.csv")
+#rental_df = pd.concat([rental_df1, rental_df2], axis=0)
+rental_df = rental_df1 # workaround to import less data in case memory is causing prod app not to render
 
 df["geometry"] = df["cmntyGeom"].astype(str)
 
