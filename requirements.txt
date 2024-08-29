@@ -8,6 +8,7 @@ dash-tools
 dash_core_components==2.0.0
 dash_html_components==2.0.0
 joblib==1.2.0
+numpy==1.22.3
 pandas==1.4.3
 geopandas
 gunicorn
