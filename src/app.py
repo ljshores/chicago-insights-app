@@ -25,7 +25,9 @@ server = app.server
 # df = pd.read_csv("intro_bees.csv")
 df = pd.read_csv("assets/Chi_Map_Data_2.csv")
 race_df = pd.read_csv("assets/Race_Cnts_Dataset.csv")
-rental_df = pd.read_csv("assets/Chi_Rentals_Formatted_Data.csv")
+rental_df1 = pd.read_csv("assets/Chi_Rentals_Formatted_Data1.csv")
+rental_df2 = pd.read_csv("assets/Chi_Rentals_Formatted_Data2.csv")
+rental_df = pd.concat([rental_df1, rental_df2], axis=1)
 
 df["geometry"] = df["cmntyGeom"].astype(str)
 
