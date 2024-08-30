@@ -81,7 +81,9 @@ rentals = rental_df[["blkGrpGeom","address","price","beds","link"]] \
                "Violent Crime", "Homicide", "avg_rental_price", "restaurant_bar_cafe"]], how="left",
            on="blkGrpGeom")
 
-
+del rental_df
+del rental_df1
+del race_df
 # ------------------------------------------------------------------------------
 # App layout
 
