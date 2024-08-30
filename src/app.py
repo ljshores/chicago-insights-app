@@ -408,9 +408,9 @@ def create_blkGrpMap(value1, value2, value3, value4, selectedData): #theft_map_f
 
     
     # ----- put the maps together using trace
-    trace0 = fig # the second map...the map that will lay on top
-    fig2.add_trace(trace0.data[0])
-    trace0.layout.update(showlegend=False)
+    #trace0 = fig # the second map...the map that will lay on top
+    fig2.add_trace(fig.data[0])
+    fig.layout.update(showlegend=False)
     
     fig2.update_layout(#title_text='Chicago Community Areas',
                       #autosize=False,
