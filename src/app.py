@@ -395,7 +395,7 @@ def create_blkGrpMap(value1, value2, value3, value4, selectedData): #theft_map_f
     
     # ----- fig2 is a base map so can alwasy see blk outlines even when there is no data
     
-    fig2 = px.choropleth(data_frame=dff1, 
+    """fig2 = px.choropleth(data_frame=dff1, 
                         geojson=dff1.geometry,
                         color="color_anchor",
                         color_discrete_map={'1': '#bad6eb'},
@@ -420,7 +420,7 @@ def create_blkGrpMap(value1, value2, value3, value4, selectedData): #theft_map_f
                       margin=dict(l=40, r=20, t=20, b=20),
                       paper_bgcolor='rgba(0,0,0,0)'
                       )
-    
+    """
     #-----rentals
     
     dff3 = rentals
@@ -450,7 +450,7 @@ def create_blkGrpMap(value1, value2, value3, value4, selectedData): #theft_map_f
      #   return '<a href="{}">{}</a>'.format(val,val)
     #temp_tbl['link']=temp_tbl.style.format({'link': make_clickable})
     
-    return fig2, temp_tbl.to_dict('records')
+    return fig, temp_tbl.to_dict('records')
 
 """
 @app.callback([
