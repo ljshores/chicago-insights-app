@@ -424,7 +424,7 @@ def create_blkGrpMap(value1, value2, value3, value4, selectedData): #theft_map_f
     dff3 = rentals
     
     try:
-        cmnty_name = selectedData['points'][0]['customdata']#[0]
+        cmnty_name = selectedData#['points'][0]['customdata']#[0]
         cmnty_name=list(cmnty_name)
     except:
         cmnty_name = dff3["community"].drop_duplicates()
