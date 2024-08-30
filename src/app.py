@@ -304,7 +304,7 @@ def update_graph(option_slctd):
 
     #container = "The param chosen by user was: {}".format(option_slctd)
 
-    dff = chi3_byCmnty_sub.copy()
+    dff = chi3_byCmnty_sub#.copy()
     
     dff = dff[['geometry', 'community', option_slctd]]
     #-----
@@ -426,7 +426,7 @@ def create_blkGrpMap(value1, value2, value3, value4, selectedData): #theft_map_f
     dff3 = rentals
     
     try:
-        cmnty_name = selectedData#['points'][0]['customdata']#[0]
+        cmnty_name = selectedData['points'][0]['customdata']#[0]
         cmnty_name=list(cmnty_name)
     except:
         cmnty_name = dff3["community"].drop_duplicates()
@@ -503,8 +503,9 @@ def get_rental_tbl(selectedData, theft_input_filter, vc_input_filter, rental_inp
 )
 
 def create_pie(selectedData):
-    inner_df = ethnicity_byGrp.copy()
-    outer_df= race_byGrp.copy()
+    inner_df = ethnicity_byGrp#.copy()
+    outer_df= race_byGrp#.copy()
+    
     try:
         cmnty_name = selectedData['points'][0]['customdata']#[0]
         cmnty_name=list(cmnty_name)
